@@ -59,4 +59,6 @@
         <param name="delta" value="0.04" />
     </node>
 
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_teleop" ns="$(arg namespace)"/>
+
 </launch>

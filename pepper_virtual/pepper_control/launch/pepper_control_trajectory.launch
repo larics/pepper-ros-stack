@@ -2,6 +2,7 @@
 <launch>
 
   <!-- Load joint controller configurations from YAML file to parameter server -->
+  <group ns="pepper_robot">
   <rosparam file="$(find pepper_control)/config/pepper_trajectory_control.yaml" command="load"/>
 
   <!-- load the controllers -->
@@ -14,6 +15,7 @@
       /pepper_dcm/Head_controller
       /pepper_dcm/Pelvis_controller
       /pepper_dcm/joint_state_controller "/>
+    </group>
 </launch>
 <!--
       /pepper_dcm/WheelFL_controller

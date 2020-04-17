@@ -7,14 +7,14 @@
   <!-- load the controllers -->
   <node name="pepper_trajectory_controller" pkg="controller_manager" type="spawner" respawn="true"
     output="screen" args="
-      /pepper_dcm/RightArm_controller
-      /pepper_dcm/LeftArm_controller
-      /pepper_dcm/RightHand_controller
-      /pepper_dcm/LeftHand_controller
-      /pepper_dcm/Head_controller
-      /pepper_dcm/Pelvis_controller
-      /pepper_dcm/WheelFL_controller
-      /pepper_dcm/WheelFR_controller
-      /pepper_dcm/WheelB_controller
-      /pepper_dcm/joint_state_controller "/>
+      /pepper_robot/RightArm_controller
+      /pepper_robot/LeftArm_controller
+      /pepper_robot/RightHand_controller
+      /pepper_robot/LeftHand_controller
+      /pepper_robot/Head_controller
+      /pepper_robot/Pelvis_controller
+      /pepper_robot/WheelFL_controller
+      /pepper_robot/WheelFR_controller
+      /pepper_robot/joint_state_controller 
+      /pepper_robot/WheelB_controller"/>
 </launch>

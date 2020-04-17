@@ -6,11 +6,18 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /RobotModel1
+        - /RobotModel1/Status1
         - /TF1
+        - /TF1/Tree1/pepper_robot/base_link1
+        - /LaserScan1
+        - /FrontCamera1
+        - /FrontCamera1/Status1
+        - /BottomCamera1
+        - /BottomCamera1/Status1
+        - /DepthCloud1
         - /DepthCloud1/Auto Size1
       Splitter Ratio: 0.5
-    Tree Height: 565
+    Tree Height: 352
   - Class: rviz/Selection
     Name: Selection
   - Class: rviz/Tool Properties
@@ -19,7 +26,7 @@ Panels:
       - /2D Nav Goal1
       - /Publish Point1
     Name: Tool Properties
-    Splitter Ratio: 0.588679
+    Splitter Ratio: 0.5886790156364441
   - Class: rviz/Views
     Expanded:
       - /Current View1
@@ -29,7 +36,11 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: DepthCloud
+Preferences:
+  PromptSaveOnExit: true
+Toolbars:
+  toolButtonStyle: 2
 Visualization Manager:
   Class: ""
   Displays:
@@ -39,7 +50,7 @@ Visualization Manager:
       Color: 160; 160; 164
       Enabled: true
       Line Style:
-        Line Width: 0.03
+        Line Width: 0.029999999329447746
         Value: Lines
       Name: Grid
       Normal Cell Count: 0
@@ -51,13 +62,49 @@ Visualization Manager:
       Plane Cell Count: 10
       Reference Frame: <Fixed Frame>
       Value: true
-    - Alpha: 0.7
+    - Alpha: 0.699999988079071
       Class: rviz/RobotModel
       Collision Enabled: false
       Enabled: true
       Links:
         All Links Enabled: true
+        BumperB_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        BumperFL_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        BumperFR_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraBottom_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraBottom_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraDepth_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraDepth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         CameraTop_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraTop_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ChestButton_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -69,6 +116,35 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        HeadTouchFront_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        HeadTouchMiddle_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        HeadTouchRear_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ImuBaseAccelerometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ImuTorsoAccelerometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ImuTorsoGyrometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         LBicep:
           Alpha: 1
           Show Axes: false
@@ -78,37 +154,63 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        LFeet:
+          Value: true
+        LFinger11_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LFinger11:
+        LFinger12_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LFinger12:
+        LFinger13_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LFinger13:
+        LFinger21_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LFinger21:
+        LFinger22_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LFinger22:
+        LFinger23_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LFinger23:
+        LFinger31_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger32_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger33_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger41_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger42_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger43_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -118,47 +220,36 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        LHip:
+        LHandTouchBack_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        LPelvis:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         LShoulder:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LSonar:
+        LSpeaker_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        LThigh:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        LThumb1:
+        LThumb1_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        LThumb2:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        LTibia:
+        LThumb2_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
         Link Tree Style: Links in Alphabetic Order
         Neck:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Pelvis:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -172,37 +263,63 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        RFeet:
+          Value: true
+        RFinger11_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RFinger11:
+        RFinger12_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RFinger12:
+        RFinger13_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RFinger13:
+        RFinger21_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RFinger21:
+        RFinger22_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RFinger22:
+        RFinger23_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RFinger23:
+        RFinger31_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger32_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger33_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger41_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger42_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger43_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -212,63 +329,106 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        RHip:
+        RHandTouchBack_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-          Value: true
-        RPelvis:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         RShoulder:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RSonar:
+        RSpeaker_frame:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        RThigh:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        RThumb1:
+        RThumb1_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RThumb2:
+        RThumb2_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        RTibia:
+        ShovelLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SonarBack_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SonarFront_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingFrontLaser_device_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingFrontLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingLeftLaser_device_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingLeftLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingRightLaser_device_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingRightLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Tablet_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Tibia:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
+        VerticalLeftLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        VerticalRightLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        WheelB_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        WheelFL_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        WheelFR_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        gaze:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        l_ankle:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         l_gripper:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        l_sole:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -277,16 +437,7 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
-        r_ankle:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
         r_gripper:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        r_sole:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -302,7 +453,7 @@ Visualization Manager:
           Value: true
       Name: RobotModel
       Robot Description: robot_description
-      TF Prefix: ""
+      TF Prefix: pepper_robot
       Update Interval: 0
       Value: true
       Visual Enabled: true
@@ -311,174 +462,305 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: true
-        CameraTop_frame:
+        pepper_robot/BumperB_frame:
           Value: true
-        Head:
+        pepper_robot/BumperFL_frame:
           Value: true
-        LBicep:
+        pepper_robot/BumperFR_frame:
           Value: true
-        LElbow:
+        pepper_robot/CameraBottom_frame:
           Value: true
-        LFeet:
+        pepper_robot/CameraBottom_optical_frame:
           Value: true
-        LFinger11:
+        pepper_robot/CameraDepth_frame:
           Value: true
-        LFinger12:
+        pepper_robot/CameraDepth_optical_frame:
           Value: true
-        LFinger13:
+        pepper_robot/CameraTop_frame:
           Value: true
-        LFinger21:
+        pepper_robot/CameraTop_optical_frame:
           Value: true
-        LFinger22:
+        pepper_robot/ChestButton_frame:
           Value: true
-        LFinger23:
+        pepper_robot/Head:
           Value: true
-        LForeArm:
+        pepper_robot/HeadTouchFront_frame:
           Value: true
-        LHip:
+        pepper_robot/HeadTouchMiddle_frame:
           Value: true
-        LPelvis:
+        pepper_robot/HeadTouchRear_frame:
           Value: true
-        LShoulder:
+        pepper_robot/Hip:
           Value: true
-        LSonar:
+        pepper_robot/ImuBaseAccelerometer_frame:
           Value: true
-        LThigh:
+        pepper_robot/ImuTorsoAccelerometer_frame:
           Value: true
-        LThumb1:
+        pepper_robot/ImuTorsoGyrometer_frame:
           Value: true
-        LThumb2:
+        pepper_robot/LBicep:
           Value: true
-        LTibia:
+        pepper_robot/LElbow:
           Value: true
-        Neck:
+        pepper_robot/LFinger11_link:
           Value: true
-        RBicep:
+        pepper_robot/LFinger12_link:
           Value: true
-        RElbow:
+        pepper_robot/LFinger13_link:
           Value: true
-        RFeet:
+        pepper_robot/LFinger21_link:
           Value: true
-        RFinger11:
+        pepper_robot/LFinger22_link:
           Value: true
-        RFinger12:
+        pepper_robot/LFinger23_link:
           Value: true
-        RFinger13:
+        pepper_robot/LFinger31_link:
           Value: true
-        RFinger21:
+        pepper_robot/LFinger32_link:
           Value: true
-        RFinger22:
+        pepper_robot/LFinger33_link:
           Value: true
-        RFinger23:
+        pepper_robot/LFinger41_link:
           Value: true
-        RForeArm:
+        pepper_robot/LFinger42_link:
           Value: true
-        RHip:
+        pepper_robot/LFinger43_link:
           Value: true
-        RPelvis:
+        pepper_robot/LForeArm:
           Value: true
-        RShoulder:
+        pepper_robot/LHandTouchBack_frame:
           Value: true
-        RSonar:
+        pepper_robot/LShoulder:
           Value: true
-        RThigh:
+        pepper_robot/LSpeaker_frame:
           Value: true
-        RThumb1:
+        pepper_robot/LThumb1_link:
           Value: true
-        RThumb2:
+        pepper_robot/LThumb2_link:
           Value: true
-        RTibia:
+        pepper_robot/Neck:
           Value: true
-        base_link:
+        pepper_robot/Pelvis:
           Value: true
-        gaze:
+        pepper_robot/RBicep:
           Value: true
-        l_ankle:
+        pepper_robot/RElbow:
           Value: true
-        l_gripper:
+        pepper_robot/RFinger11_link:
           Value: true
-        l_sole:
+        pepper_robot/RFinger12_link:
           Value: true
-        l_wrist:
+        pepper_robot/RFinger13_link:
           Value: true
-        r_ankle:
+        pepper_robot/RFinger21_link:
           Value: true
-        r_gripper:
+        pepper_robot/RFinger22_link:
           Value: true
-        r_sole:
+        pepper_robot/RFinger23_link:
           Value: true
-        r_wrist:
+        pepper_robot/RFinger31_link:
           Value: true
-        torso:
+        pepper_robot/RFinger32_link:
           Value: true
-      Marker Scale: 0.3
+        pepper_robot/RFinger33_link:
+          Value: true
+        pepper_robot/RFinger41_link:
+          Value: true
+        pepper_robot/RFinger42_link:
+          Value: true
+        pepper_robot/RFinger43_link:
+          Value: true
+        pepper_robot/RForeArm:
+          Value: true
+        pepper_robot/RHandTouchBack_frame:
+          Value: true
+        pepper_robot/RShoulder:
+          Value: true
+        pepper_robot/RSpeaker_frame:
+          Value: true
+        pepper_robot/RThumb1_link:
+          Value: true
+        pepper_robot/RThumb2_link:
+          Value: true
+        pepper_robot/ShovelLaser_frame:
+          Value: true
+        pepper_robot/SonarBack_frame:
+          Value: true
+        pepper_robot/SonarFront_frame:
+          Value: true
+        pepper_robot/SurroundingFrontLaser_device_frame:
+          Value: true
+        pepper_robot/SurroundingFrontLaser_frame:
+          Value: true
+        pepper_robot/SurroundingLeftLaser_device_frame:
+          Value: true
+        pepper_robot/SurroundingLeftLaser_frame:
+          Value: true
+        pepper_robot/SurroundingRightLaser_device_frame:
+          Value: true
+        pepper_robot/SurroundingRightLaser_frame:
+          Value: true
+        pepper_robot/Tablet_frame:
+          Value: true
+        pepper_robot/Tibia:
+          Value: true
+        pepper_robot/VerticalLeftLaser_frame:
+          Value: true
+        pepper_robot/VerticalRightLaser_frame:
+          Value: true
+        pepper_robot/WheelB_link:
+          Value: true
+        pepper_robot/WheelFL_link:
+          Value: true
+        pepper_robot/WheelFR_link:
+          Value: true
+        pepper_robot/base_footprint:
+          Value: true
+        pepper_robot/base_link:
+          Value: true
+        pepper_robot/l_gripper:
+          Value: true
+        pepper_robot/l_wrist:
+          Value: true
+        pepper_robot/r_gripper:
+          Value: true
+        pepper_robot/r_wrist:
+          Value: true
+        pepper_robot/torso:
+          Value: true
+      Marker Scale: 0.30000001192092896
       Name: TF
       Show Arrows: true
       Show Axes: true
       Show Names: true
       Tree:
-        base_link:
-          torso:
-            LPelvis:
-              LHip:
-                LThigh:
-                  LTibia:
-                    l_ankle:
-                      LFeet:
-                        l_sole:
-                          {}
-            LShoulder:
-              LBicep:
-                LElbow:
-                  LForeArm:
-                    l_wrist:
-                      LFinger11:
-                        LFinger12:
-                          LFinger13:
-                            {}
-                      LFinger21:
-                        LFinger22:
-                          LFinger23:
-                            {}
-                      LThumb1:
-                        LThumb2:
-                          {}
-                      l_gripper:
-                        {}
-            LSonar:
+        pepper_robot/base_link:
+          pepper_robot/torso:
+            pepper_robot/ChestButton_frame:
               {}
-            Neck:
-              Head:
-                CameraTop_frame:
-                  gaze:
+            pepper_robot/Hip:
+              pepper_robot/Pelvis:
+                pepper_robot/Tibia:
+                  pepper_robot/BumperB_frame:
                     {}
-            RPelvis:
-              RHip:
-                RThigh:
-                  RTibia:
-                    r_ankle:
-                      RFeet:
-                        r_sole:
-                          {}
-            RShoulder:
-              RBicep:
-                RElbow:
-                  RForeArm:
-                    r_wrist:
-                      RFinger11:
-                        RFinger12:
-                          RFinger13:
+                  pepper_robot/BumperFL_frame:
+                    {}
+                  pepper_robot/BumperFR_frame:
+                    {}
+                  pepper_robot/ImuBaseAccelerometer_frame:
+                    {}
+                  pepper_robot/ShovelLaser_frame:
+                    {}
+                  pepper_robot/SonarBack_frame:
+                    {}
+                  pepper_robot/SonarFront_frame:
+                    {}
+                  pepper_robot/SurroundingFrontLaser_device_frame:
+                    {}
+                  pepper_robot/SurroundingFrontLaser_frame:
+                    {}
+                  pepper_robot/SurroundingLeftLaser_device_frame:
+                    {}
+                  pepper_robot/SurroundingLeftLaser_frame:
+                    {}
+                  pepper_robot/SurroundingRightLaser_device_frame:
+                    {}
+                  pepper_robot/SurroundingRightLaser_frame:
+                    {}
+                  pepper_robot/VerticalLeftLaser_frame:
+                    {}
+                  pepper_robot/VerticalRightLaser_frame:
+                    {}
+                  pepper_robot/WheelB_link:
+                    {}
+                  pepper_robot/WheelFL_link:
+                    {}
+                  pepper_robot/WheelFR_link:
+                    {}
+                  pepper_robot/base_footprint:
+                    {}
+            pepper_robot/ImuTorsoAccelerometer_frame:
+              {}
+            pepper_robot/ImuTorsoGyrometer_frame:
+              {}
+            pepper_robot/LShoulder:
+              pepper_robot/LBicep:
+                pepper_robot/LElbow:
+                  pepper_robot/LForeArm:
+                    pepper_robot/l_wrist:
+                      pepper_robot/LFinger11_link:
+                        pepper_robot/LFinger12_link:
+                          pepper_robot/LFinger13_link:
                             {}
-                      RFinger21:
-                        RFinger22:
-                          RFinger23:
+                      pepper_robot/LFinger21_link:
+                        pepper_robot/LFinger22_link:
+                          pepper_robot/LFinger23_link:
                             {}
-                      RThumb1:
-                        RThumb2:
-                          {}
-                      r_gripper:
+                      pepper_robot/LFinger31_link:
+                        pepper_robot/LFinger32_link:
+                          pepper_robot/LFinger33_link:
+                            {}
+                      pepper_robot/LFinger41_link:
+                        pepper_robot/LFinger42_link:
+                          pepper_robot/LFinger43_link:
+                            {}
+                      pepper_robot/LHandTouchBack_frame:
                         {}
-            RSonar:
+                      pepper_robot/LThumb1_link:
+                        pepper_robot/LThumb2_link:
+                          {}
+                      pepper_robot/l_gripper:
+                        {}
+            pepper_robot/Neck:
+              pepper_robot/Head:
+                pepper_robot/CameraBottom_frame:
+                  pepper_robot/CameraBottom_optical_frame:
+                    {}
+                pepper_robot/CameraDepth_frame:
+                  pepper_robot/CameraDepth_optical_frame:
+                    {}
+                pepper_robot/CameraTop_frame:
+                  pepper_robot/CameraTop_optical_frame:
+                    {}
+                pepper_robot/HeadTouchFront_frame:
+                  {}
+                pepper_robot/HeadTouchMiddle_frame:
+                  {}
+                pepper_robot/HeadTouchRear_frame:
+                  {}
+                pepper_robot/LSpeaker_frame:
+                  {}
+                pepper_robot/RSpeaker_frame:
+                  {}
+            pepper_robot/RShoulder:
+              pepper_robot/RBicep:
+                pepper_robot/RElbow:
+                  pepper_robot/RForeArm:
+                    pepper_robot/r_wrist:
+                      pepper_robot/RFinger11_link:
+                        pepper_robot/RFinger12_link:
+                          pepper_robot/RFinger13_link:
+                            {}
+                      pepper_robot/RFinger21_link:
+                        pepper_robot/RFinger22_link:
+                          pepper_robot/RFinger23_link:
+                            {}
+                      pepper_robot/RFinger31_link:
+                        pepper_robot/RFinger32_link:
+                          pepper_robot/RFinger33_link:
+                            {}
+                      pepper_robot/RFinger41_link:
+                        pepper_robot/RFinger42_link:
+                          pepper_robot/RFinger43_link:
+                            {}
+                      pepper_robot/RHandTouchBack_frame:
+                        {}
+                      pepper_robot/RThumb1_link:
+                        pepper_robot/RThumb2_link:
+                          {}
+                      pepper_robot/r_gripper:
+                        {}
+            pepper_robot/Tablet_frame:
               {}
       Update Interval: 0
       Value: true
@@ -494,7 +776,7 @@ Visualization Manager:
       Color: 0; 255; 0
       Color Transformer: FlatColor
       Decay Time: 0
-      Enabled: false
+      Enabled: true
       Invert Rainbow: false
       Max Color: 255; 255; 255
       Max Intensity: 4096
@@ -505,39 +787,43 @@ Visualization Manager:
       Queue Size: 10
       Selectable: true
       Size (Pixels): 3
-      Size (m): 0.01
+      Size (m): 0.009999999776482582
       Style: Points
       Topic: /pepper_robot/laser
+      Unreliable: false
       Use Fixed Frame: true
       Use rainbow: true
-      Value: false
+      Value: true
     - Alpha: 0.5
       Buffer Length: 1
       Class: rviz/Range
       Color: 255; 255; 255
-      Enabled: false
+      Enabled: true
       Name: BackSonar
       Queue Size: 100
       Topic: /pepper_robot/sonar/back
-      Value: false
+      Unreliable: false
+      Value: true
     - Alpha: 0.5
       Buffer Length: 1
       Class: rviz/Range
       Color: 255; 255; 255
-      Enabled: false
+      Enabled: true
       Name: FrontSonar
       Queue Size: 100
       Topic: /pepper_robot/sonar/front
-      Value: false
+      Unreliable: false
+      Value: true
     - Class: rviz/Camera
-      Enabled: false
+      Enabled: true
       Image Rendering: background and overlay
       Image Topic: /pepper_robot/camera/front/image_raw
       Name: FrontCamera
       Overlay Alpha: 0.5
       Queue Size: 2
       Transport Hint: compressed
-      Value: false
+      Unreliable: false
+      Value: true
       Visibility:
         BackSonar: true
         BottomCamera: true
@@ -550,14 +836,15 @@ Visualization Manager:
         Value: true
       Zoom Factor: 1
     - Class: rviz/Camera
-      Enabled: false
+      Enabled: true
       Image Rendering: background and overlay
       Image Topic: /pepper_robot/camera/bottom/image_raw
       Name: BottomCamera
       Overlay Alpha: 0.5
       Queue Size: 2
       Transport Hint: raw
-      Value: false
+      Unreliable: false
+      Value: true
       Visibility:
         BackSonar: true
         DepthCloud: true
@@ -575,8 +862,8 @@ Visualization Manager:
         Value: true
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
-        Max Value: 0.946703
-        Min Value: -0.746588
+        Max Value: 0.9017796516418457
+        Min Value: -0.0016123056411743164
         Value: true
       Axis: Z
       Channel Name: intensity
@@ -586,7 +873,7 @@ Visualization Manager:
       Color Transformer: AxisColor
       Color Transport Hint: raw
       Decay Time: 0
-      Depth Map Topic: /pepper_robot/camera/depth/image_raw
+      Depth Map Topic: /camera/depth/depth/image_raw
       Depth Map Transport Hint: raw
       Enabled: false
       Invert Rainbow: false
@@ -610,7 +897,8 @@ Visualization Manager:
   Enabled: true
   Global Options:
     Background Color: 48; 48; 48
-    Fixed Frame: torso
+    Default Light: true
+    Fixed Frame: pepper_robot/base_footprint
     Frame Rate: 30
   Name: root
   Tools:
@@ -621,7 +909,10 @@ Visualization Manager:
     - Class: rviz/FocusCamera
     - Class: rviz/Measure
     - Class: rviz/SetInitialPose
+      Theta std deviation: 0.2617993950843811
       Topic: /initialpose
+      X std deviation: 0.5
+      Y std deviation: 0.5
     - Class: rviz/SetGoal
       Topic: /move_base_simple/goal
     - Class: rviz/PublishPoint
@@ -631,9 +922,9 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.32784
+      Distance: 25.282175064086914
       Enable Stereo Rendering:
-        Stereo Eye Separation: 0.06
+        Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
@@ -641,20 +932,27 @@ Visualization Manager:
         X: 0
         Y: 0
         Z: 0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
       Name: Current View
-      Near Clip Distance: 0.01
-      Pitch: 0.055398
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.4652021527290344
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 0.000398632
+      Yaw: 2.6022491455078125
     Saved: ~
 Window Geometry:
+  BottomCamera:
+    collapsed: false
   Displays:
     collapsed: false
-  Height: 846
+  FrontCamera:
+    collapsed: false
+  Height: 1025
   Hide Left Dock: false
   Hide Right Dock: false
-  QMainWindow State: 000000ff00000000fd00000004000000000000013c000002c4fc0200000008fb0000001200530065006c0065006300740069006f006e00000001e10000009b0000006400fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c0061007900730100000028000002c4000000dd00fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261000000010000010f000002c4fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a005600690065007700730100000028000002c4000000b000fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e10000019700000003000004b00000003efc0100000002fb0000000800540069006d00650100000000000004b0000002f600fffffffb0000000800540069006d0065010000000000000450000000000000000000000259000002c400000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd00000004000000000000015600000363fc020000000afb0000001200530065006c0065006300740069006f006e00000001e10000009b0000005c00fffffffb0000001e0054006f006f006c002000500072006f007000650072007400690065007302000001ed000001df00000185000000a3fb000000120056006900650077007300200054006f006f02000001df000002110000018500000122fb000000200054006f006f006c002000500072006f0070006500720074006900650073003203000002880000011d000002210000017afb000000100044006900730070006c006100790073010000003d000001eb000000c900fffffffb0000002000730065006c0065006300740069006f006e00200062007500660066006500720200000138000000aa0000023a00000294fb00000014005700690064006500530074006500720065006f02000000e6000000d2000003ee0000030bfb0000000c004b0069006e0065006300740200000186000001060000030c00000261fb000000180042006f00740074006f006d00430061006d006500720061010000022e000000b70000001600fffffffb0000001600460072006f006e007400430061006d00650072006101000002eb000000b50000001600ffffff000000010000010f00000363fc0200000003fb0000001e0054006f006f006c002000500072006f00700065007200740069006500730100000041000000780000000000000000fb0000000a00560069006500770073010000003d00000363000000a400fffffffb0000001200530065006c0065006300740069006f006e010000025a000000b200000000000000000000000200000490000000a9fc0100000001fb0000000a00560069006500770073030000004e00000080000002e100000197000000030000073d0000003efc0100000002fb0000000800540069006d006501000000000000073d000002eb00fffffffb0000000800540069006d00650100000000000004500000000000000000000004cc0000036300000004000000040000000800000008fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Selection:
     collapsed: false
   Time:
@@ -663,6 +961,6 @@ Window Geometry:
     collapsed: false
   Views:
     collapsed: false
-  Width: 1200
-  X: 55
-  Y: 40
+  Width: 1853
+  X: 67
+  Y: 27

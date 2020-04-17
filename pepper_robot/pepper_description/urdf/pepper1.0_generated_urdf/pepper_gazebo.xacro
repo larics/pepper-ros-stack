@@ -330,7 +330,7 @@
     </gazebo>
 
     <gazebo reference="WheelFL_link">
-        <mu1>1</mu1>
+        <mu1>0</mu1>
         <mu2>0</mu2>
         <kp value="10000000.0" />
         <kd value="1.0" />
@@ -339,8 +339,8 @@
         <turnGravityOff>false</turnGravityOff>
     </gazebo>
     <gazebo reference="WheelB_link">
-        <mu1>0.5</mu1>
-        <mu2>0.5</mu2>
+        <mu1>0</mu1>
+        <mu2>0</mu2>
         <kp value="10000000.0" />
         <kd value="1.0" />
         <fdir1 value="1 0 0"/>
@@ -349,7 +349,7 @@
     </gazebo>
     <gazebo reference="WheelFR_link">
         <mu1>0</mu1>
-        <mu2>1</mu2>
+        <mu2>0</mu2>
         <kp value="10000000.0" />
         <kd value="1.0" />
         <fdir1 value="0 1 0"/>
@@ -539,9 +539,10 @@
           </clip>
         </camera>
         <plugin name="CameraDepth_frame_controller" filename="libgazebo_ros_openni_kinect.so">
+          <robotNamespace>/pepper_robot</robotNamespace>
           <alwaysOn>true</alwaysOn>
           <updateRate>20.0</updateRate>
-          <cameraName>pepper_robot/camera</cameraName>
+          <cameraName>camera/depth</cameraName>
           <imageTopicName>ir/image_raw</imageTopicName>
           <cameraInfoTopicName>depth/camera_info</cameraInfoTopicName>
           <depthImageTopicName>depth/image_raw</depthImageTopicName>
@@ -719,28 +720,20 @@
 
 <!-- Drive controller -->
 <gazebo>
-  <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
-    <alwaysOn>true</alwaysOn>
-    <legacyMode>false</legacyMode>
-    <updateRate>100</updateRate>
-    <robotNamespace>/</robotNamespace>
-    <leftJoint>WheelFL</leftJoint>
-    <rightJoint>WheelFR</rightJoint>
-    <wheelSeparation>0.170</wheelSeparation>
-    <wheelDiameter>0.140</wheelDiameter>
-    <torque>36.9</torque>
-    <commandTopic>cmd_vel</commandTopic>
-    <odometryTopic>odom_diffdrive</odometryTopic>
-    <odometryFrame>odom</odometryFrame>
-    <odometrySource>world</odometrySource>
-    <publishTf>1</publishTf>
-    <rosDebugLevel>na</rosDebugLevel>
-    <wheelAcceleration>0</wheelAcceleration>
-    <wheelTorque>5</wheelTorque>
-    <robotBaseFrame>base_link</robotBaseFrame>
-    <publishWheelTF>false</publishWheelTF>
-    <publishWheelJointState>false</publishWheelJointState>
-  </plugin>
+  <plugin name="pepper_drive" filename="libgazebo_ros_force_based_move.so">
+      <robotNamespace>/pepper_robot</robotNamespace>
+      <commandTopic>cmd_vel</commandTopic>
+      <odometryTopic>odom</odometryTopic>
+      <odometryFrame>odom</odometryFrame>
+      <odometryRate>25.0</odometryRate>
+      <robotBaseFrame>base_link</robotBaseFrame>
+      <cmdVelTimeOut>0.25</cmdVelTimeOut>
+      <!-- Don't publish a transform: the controller does it. -->
+      <publishOdometryTf>0</publishOdometryTf>
+      <yaw_velocity_p_gain>500.0</yaw_velocity_p_gain>
+      <x_velocity_p_gain>10000.0</x_velocity_p_gain>
+      <y_velocity_p_gain>10000.0</y_velocity_p_gain>
+    </plugin>
 </gazebo>
 </robot>
 

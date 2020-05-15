@@ -1,0 +1,65 @@
+<launch>
+  <arg name="namespace"           default="pepper_robot" />
+
+  <arg name="launch_control_trajectory_all" default="true"/>
+  <!-- Load the URDF Model -->
+  <include file="$(find pepper_description)/launch/pepper_publisher.launch" />  
+  <!-- We resume the logic in empty_world.launch, changing only the name of the world to be launched -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find larics_gazebo_worlds)/worlds/floor_plan_simple.world"/>
+    <arg name="paused" value="false"/>
+    <arg name="verbose" value="true" />
+  </include>
+
+
+  <!-- Call Pepper Robot Trajectory Controller -->
+
+  <include file="$(find pepper_control)/launch/pepper_control_trajectory.launch" unless="$(arg launch_control_trajectory_all)"/>
+  <include file="$(find pepper_control)/launch/pepper_control_trajectory_all.launch" if="$(arg launch_control_trajectory_all)"/>
+<!--
+  <include file="$(find pepper_control)/launch/pepper_control_position.launch"/>
+-->
+  <!-- Spawn a robot into Gazebo -->
+  <param name="tf_prefix" value="pepper_robot" />
+  <node name="spawn_urdf" pkg="gazebo_ros" type="spawn_model"
+    args="-param robot_description -urdf -x 5 -y -12 -z 0.88 -model pepper_robot" />
+
+    <!-- Pointcloud -> Laserscan -->
+    <node ns="$(arg namespace)" pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pepper_fake_laser" output="screen">
+        <remap from="cloud_in" to="camera/depth/depth/points" />
+        <param name="scan_time" type="double" value="0.2" />
+        <param name="range_min" type="double" value="0.4" />
+        <param name="range_max" type="double" value="10.0" />
+        <param name="use_inf" type="boolean" value="true" />
+        <param name="min_height" type="double" value="-0.5" />
+        <param name="max_height" type="double" value="1.3" />
+        <param name="target_frame" type="string" value="$(arg namespace)/base_link" />
+        <param name="concurrency_level" type="int" value="0" />
+    </node>
+
+
+    <!-- Run Gmapping -->
+    <node pkg="gmapping" type="slam_gmapping" name="pepper_gmapping">
+        <remap from="odom" to="$(arg namespace)/odom" />
+        <remap from="scan" to="$(arg namespace)/scan" />
+        <param name="map_update_interval" value="0.3" />
+        <param name="maxUrange" value="8.0" />
+        <param name="srr" value="0.1" />
+        <param name="srt" value="0.2" />
+        <param name="str" value="0.1" />
+        <param name="stt" value="0.2" />
+        <param name="linearUpdate" value="0.1" />
+        <param name="angularUpdate" value="0.1" />
+        <param name="xmin" value="-5.0" />
+        <param name="ymin" value="-5.0" />
+        <param name="xmax" value="5.0" />
+        <param name="ymax" value="5.0" />
+        <param name="delta" value="0.04" />
+        <param name="map_frame" value="/pepper_robot/map"/>
+        <param name="odom_frame" value="$(arg namespace)/odom"/>
+        <param name="base_frame" value="$(arg namespace)/base_link"/>
+    </node>
+
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_teleop" ns="$(arg namespace)" output="screen"/>
+
+</launch>

@@ -3,6 +3,6 @@
   <arg name="version" default="1.0" />
 	  <param name="robot_description" command="$(find xacro)/xacro --inorder $(find pepper_description)/urdf/pepper$(arg version)_generated_urdf/pepper_robot.xacro" />
 	  <node pkg="robot_state_publisher" type="robot_state_publisher" name="robot_state_publisher">
-	  	<param name="tf_prefix" value="pepper_robot"/>
+	  	<!--<param name="tf_prefix" value="pepper_robot"/>-->
 	  </node>
 </launch>

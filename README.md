@@ -18,7 +18,7 @@ When you try to launch *pepper_full_py.launch* from the *pepper_bringup* just lo
 ## Gazebo dependencies
 To see the robot in Gazebo, you need *pepper_meshes* package, which you can install by running *sudo apt install ros-melodic-pepper-meshes*. You will not see the robot if you use github version of the *pepper_meshes* repository since it does not contain any .dae files.
 
-You will alse need Gazebo plugins from *https://github.com/roboticsgroup/roboticsgroup_gazebo_plugins*.
+You will alse need Gazebo plugins from *https://github.com/roboticsgroup/roboticsgroup_gazebo_plugins* and hector-gazebo-plugins (install with apt).
 
 ## Running 
 Just launch *pepper_gmapping.launch* to set up Pepper for mapping and then use some node to drive with joystick (just launch it in *pepper_robot* namespace or remap the topic).

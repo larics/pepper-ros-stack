@@ -13,7 +13,7 @@
     <arg name="nao_ip"    value="$(arg nao_ip)" />
   </include>
 
-  <include file="$(find pepper_sensors_py)/launch/camera.launch" ns="$(arg namespace)/camera/depth" >
+   <include file="$(find pepper_sensors_py)/launch/camera.launch" ns="$(arg namespace)/camera/depth" >
     <arg name="nao_ip"    value="$(arg nao_ip)" />
     <arg name="source"          value="2" />
     <arg name="color_space"     value="17" />
@@ -26,6 +26,7 @@
         <remap from="camera_info" to="/pepper_robot/camera/depth/camera/camera_info"/>
         <remap from="image_rect" to="/pepper_robot/camera/depth/camera/image_raw"/>
     </node>
+  
 
     <!-- Pointcloud -> Laserscan -->
     <node pkg="pointcloud_to_laserscan" type="pointcloud_to_laserscan_node" name="pepper_fake_laser">
@@ -59,6 +60,6 @@
         <param name="delta" value="0.04" />
     </node>
 
-    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_teleop" ns="$(arg namespace)"/>
+    <node pkg="teleop_twist_keyboard" type="teleop_twist_keyboard.py" name="keyboard_teleop" ns="$(arg namespace)" output="screen"/>
 
 </launch>

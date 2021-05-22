@@ -26,7 +26,7 @@ import almath
 import tf
 from tf.transformations import euler_from_quaternion
 
-class MoveToListener(NaoqiNode):
+class MoveListener(NaoqiNode):
 
     def __init__(self):
         NaoqiNode.__init__(self, 'naoqi_move_listener')

@@ -7,7 +7,6 @@ Panels:
         - /Global Options1
         - /Status1
         - /RobotModel1
-        - /RobotModel1/Status1
         - /TF1
         - /LaserScan1
         - /FrontCamera1
@@ -38,7 +37,7 @@ Panels:
     Experimental: false
     Name: Time
     SyncMode: 0
-    SyncSource: ""
+    SyncSource: LaserScan
 Preferences:
   PromptSaveOnExit: true
 Toolbars:
@@ -70,10 +69,389 @@ Visualization Manager:
       Enabled: true
       Links:
         All Links Enabled: true
+        BumperB_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        BumperFL_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        BumperFR_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraBottom_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraBottom_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraDepth_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraDepth_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraTop_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        CameraTop_optical_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ChestButton_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         Expand Joint Details: false
         Expand Link Details: false
         Expand Tree: false
+        Head:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        HeadTouchFront_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        HeadTouchMiddle_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        HeadTouchRear_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Hip:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ImuBaseAccelerometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ImuTorsoAccelerometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ImuTorsoGyrometer_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LBicep:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LElbow:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger11_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger12_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger13_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger21_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger22_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger23_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger31_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger32_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger33_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger41_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger42_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LFinger43_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LForeArm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LHandTouchBack_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LShoulder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LSpeaker_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        LThumb1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        LThumb2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         Link Tree Style: Links in Alphabetic Order
+        Neck:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        Pelvis:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RBicep:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RElbow:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger11_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger12_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger13_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger21_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger22_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger23_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger31_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger32_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger33_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger41_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger42_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RFinger43_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RForeArm:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RHandTouchBack_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RShoulder:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RSpeaker_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        RThumb1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        RThumb2_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ShovelLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SonarBack_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SonarFront_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingFrontLaser_device_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingFrontLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingLeftLaser_device_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingLeftLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingRightLaser_device_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        SurroundingRightLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Tablet_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        Tibia:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        VerticalLeftLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        VerticalRightLaser_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        WheelB_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        WheelFL_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        WheelFR_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_gripper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        l_wrist:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        r_gripper:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        r_wrist:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        torso:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
       Name: RobotModel
       Robot Description: robot_description
       TF Prefix: ""
@@ -81,7 +459,7 @@ Visualization Manager:
       Value: true
       Visual Enabled: true
     - Class: rviz/TF
-      Enabled: true
+      Enabled: false
       Frame Timeout: 15
       Frames:
         All Enabled: true
@@ -93,7 +471,7 @@ Visualization Manager:
       Tree:
         {}
       Update Interval: 0
-      Value: true
+      Value: false
     - Alpha: 1
       Autocompute Intensity Bounds: true
       Autocompute Value Bounds:
@@ -155,6 +533,7 @@ Visualization Manager:
       Unreliable: false
       Value: false
       Visibility:
+        "": true
         BackSonar: true
         BottomCamera: true
         DepthCloud: true
@@ -177,6 +556,7 @@ Visualization Manager:
       Unreliable: false
       Value: false
       Visibility:
+        "": true
         BackSonar: true
         DepthCloud: true
         FrontCamera: true
@@ -232,7 +612,27 @@ Visualization Manager:
       Draw Behind: false
       Enabled: true
       Name: Map
-      Topic: /map
+      Topic: /pepper_robot/map
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /pepper_robot/move_base/global_costmap/costmap
+      Unreliable: false
+      Use Timestamp: false
+      Value: true
+    - Alpha: 0.699999988079071
+      Class: rviz/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /pepper_robot/move_base/local_costmap/costmap
       Unreliable: false
       Use Timestamp: false
       Value: true
@@ -256,7 +656,7 @@ Visualization Manager:
       X std deviation: 0.5
       Y std deviation: 0.5
     - Class: rviz/SetGoal
-      Topic: /move_base_simple/goal
+      Topic: /pepper_robot/move_base_simple/goal
     - Class: rviz/PublishPoint
       Single click: true
       Topic: /clicked_point
@@ -264,7 +664,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 5.932338714599609
+      Distance: 20.76797866821289
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -279,10 +679,10 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3352023959159851
+      Pitch: 0.6402022838592529
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 2.6522414684295654
+      Yaw: 3.6372458934783936
     Saved: ~
 Window Geometry:
   BottomCamera:

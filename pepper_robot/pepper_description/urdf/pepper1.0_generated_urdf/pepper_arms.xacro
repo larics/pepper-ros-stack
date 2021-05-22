@@ -36,7 +36,8 @@
 	<joint name="LElbowYaw" type="revolute">
 		<parent link="LBicep"/>
 		<child link="LElbow"/>
-		<origin rpy="0 -0.157079 0" xyz="0.1812 0.015 0.00013"/>
+		<!-- <origin rpy="0 -0.157079 0" xyz="0.1812 0.015 0.00013"/> -->
+		<origin rpy="0 -0.0 0" xyz="0.1812 0.015 0.00013"/>
 		<axis xyz="1.0 0 0"/>
 		<limit effort="5.428" lower="-2.08567" upper="2.08567" velocity="7.33998"/>
 	</joint>
@@ -124,7 +125,8 @@
 	<joint name="RElbowYaw" type="revolute">
 		<parent link="RBicep"/>
 		<child link="RElbow"/>
-		<origin rpy="0 -0.157079 0" xyz="0.1812 -0.015 0.00013"/>
+		<!-- <origin rpy="0 -0.157079 0" xyz="0.1812 -0.015 0.00013"/> -->
+		<origin rpy="0 -0.0 0" xyz="0.1812 -0.015 0.00013"/>
 		<axis xyz="1.0 0 0"/>
 		<limit effort="5.428" lower="-2.08567" upper="2.08567" velocity="7.33998"/>
 	</joint>
